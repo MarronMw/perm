@@ -33,14 +33,14 @@ class DatabaseSeeder extends Seeder
 
         //Add and assign permissions to admin role
         $adminRole=Role::create(['name'=>'admin']);
-        $adminRole->givePermissionTo(Permission::all());
+        $adminRole->syncPermissions(Permission::all());
         
         //Add and assign permissions to admin role
         $editorRole=Role::create(['name'=>'editor']);
         $editorRole->givePermissionTo('edit articles');
 
         //Asign em to a user
-        $user=User::find(5);//since the first user has an id of 5
+        $user=User::find(7);//since the first user has an id of 6
         $user->assignRole('admin');
     }
 }

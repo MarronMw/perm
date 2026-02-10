@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, usePage } from '@inertiajs/vue3';
+
+const page=usePage();
+const user= page.props.auth.user;
 </script>
 
 <template>
@@ -21,7 +24,18 @@ import { Head } from '@inertiajs/vue3';
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
                 >
                     <div class="p-6 text-gray-900">
-                        You're logged in!
+                        You're logged in! as :
+                        {{ user }}
+                    </div>
+                    <div class="p-6 text-white bg-blue-600">
+                        Your Permissions are:
+                        {{ user.permissions }}
+                    </div>
+                    <div class="p-6 text-gray-900 bg-red-200">
+                        Your Roles are:
+                        {{ user.roles }}
+                        <p v-if="user.roles.includes('admin')">->admin</p>
+                        <p v-if="user.roles.includes('editor')">->editor</p>
                     </div>
                 </div>
             </div>
