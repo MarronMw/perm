@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\UserController;
+use Athphane\ProgrammerQuotes\ProgrammerQuotes;
 
 
 Route::get('/', function () {
@@ -17,7 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Dashboard',[
+        'namey'=>'Marron',
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/users', function () {
