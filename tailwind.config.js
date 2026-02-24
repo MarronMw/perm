@@ -22,6 +22,19 @@ export default {
             fontWeight: {
                 tight: "800",
             },
+
+            colors: {
+                brand: {
+                    navy: "#1B2B48", // bg for nav and sidebar, primary buttons, headings
+                    silver: "#C0C0C0", // Utility and dividers,icons(non-active),secondary actions
+                    dark: "#111A2C", // For deeper shadows/hovers
+                    light: "#E2E8F0", // For subtle backgrounds
+                    white: "#FFFFFF", // App bg, Cards bg
+                    warning: "#f97316", //warnings and alerts
+                    success: "#15803d", //success messages and indicators
+                    error: "#dc2626", //error messages and indicators
+                },
+            },
         },
     },
 
