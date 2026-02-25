@@ -57,9 +57,9 @@ defineProps<{
         >
             <div class="max-w-3xl text-center">
                 <img
-                    src="https://source.unsplash.com/featured/?tools,garage"
+                    src="./../../../public/images/chida.png"
                     alt="Garage tools"
-                    class="mx-auto mb-6 rounded-lg shadow-lg"
+                    class="mx-auto mb-6 rounded-lg shadow-lg w-20"
                 />
                 <h1 class="text-5xl md:text-7xl font-brand font-tight mb-6">
                     Manage Your Toolbox Effortlessly
@@ -72,13 +72,13 @@ defineProps<{
                     <Link
                         v-if="canRegister"
                         href="/register"
-                        class="px-8 py-3 bg-brand-success hover:bg-brand-warning text-white rounded-md font-semibold"
+                        class="px-8 py-3 bg-brand-warning hover:bg-brand-dark text-white rounded-md font-semibold"
                         >Get Started</Link
                     >
                     <Link
                         v-if="canLogin"
                         href="/login"
-                        class="px-8 py-3 border border-brand-success text-brand-success hover:bg-brand-success hover:text-white rounded-md font-semibold"
+                        class="px-8 py-3 border border-brand-warning text-brand-warning hover:bg-brand-warning hover:text-white rounded-md font-semibold"
                         >Sign In</Link
                     >
                 </div>
