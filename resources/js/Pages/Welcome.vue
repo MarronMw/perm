@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { Head, Link } from "@inertiajs/vue3";
+import {
+    BarChart3Icon,
+    BarcodeIcon,
+    Blocks,
+    ToolCaseIcon,
+} from "lucide-vue-next";
 
 defineProps<{
     canLogin?: boolean;
@@ -65,7 +71,7 @@ defineProps<{
                     Manage Your Toolbox Effortlessly
                 </h1>
                 <p class="text-xl md:text-2xl leading-relaxed mb-8">
-                    chidaSafe is the ultimate toolbox inventory app for garage
+                    ChidaSafe is the ultimate toolbox inventory app for garage
                     owners, helping you track, organize, and protect your tools.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -95,11 +101,7 @@ defineProps<{
                     <div
                         class="p-6 border rounded-lg shadow hover:shadow-lg transition-shadow"
                     >
-                        <img
-                            src="https://picsum.photos/seed/inventory/400/250"
-                            alt="Inventory"
-                            class="mb-4 rounded"
-                        />
+                        <Blocks class="h-12 w-12 text-brand-warning mb-4" />
                         <h3 class="text-xl font-semibold mb-2">
                             Inventory Tracking
                         </h3>
@@ -111,10 +113,8 @@ defineProps<{
                     <div
                         class="p-6 border rounded-lg shadow hover:shadow-lg transition-shadow"
                     >
-                        <img
-                            src="https://picsum.photos/seed/barcode/400/250"
-                            alt="Barcode scan"
-                            class="mb-4 rounded"
+                        <BarcodeIcon
+                            class="h-12 w-12 text-brand-warning mb-4"
                         />
                         <h3 class="text-xl font-semibold mb-2">
                             Barcode Scanning
@@ -127,10 +127,8 @@ defineProps<{
                     <div
                         class="p-6 border rounded-lg shadow hover:shadow-lg transition-shadow"
                     >
-                        <img
-                            src="https://picsum.photos/seed/reports/400/250"
-                            alt="Reports"
-                            class="mb-4 rounded"
+                        <BarChart3Icon
+                            class="h-12 w-12 text-brand-warning mb-4"
                         />
                         <h3 class="text-xl font-semibold mb-2">
                             Usage Reports
