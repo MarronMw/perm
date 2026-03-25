@@ -12,6 +12,12 @@ console.log(page.props);
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
-        <div class="context"><p>Hello bwana</p></div>
+        <div class="context">
+            <p class="font-semibold">
+                <span v-if="user.roles.includes('admin')"
+                    >Welcome{{ " Admin " }} {{ user.name }}!</span
+                >
+            </p>
+        </div>
     </AuthenticatedLayout>
 </template>
